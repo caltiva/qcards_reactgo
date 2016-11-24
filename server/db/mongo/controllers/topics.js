@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import Topic from '../models/topics';
+import Qprocess from '../models/Qprocess';
 
 /**
  * List
@@ -19,12 +20,18 @@ export function all(req, res) {
  * Add a Topic
  */
 export function add(req, res) {
-  Topic.create(req.body, (err) => {
+  Qprocess.create(req.body, (err) => {
     if (err) {
       console.log(err);
       return res.status(400).send(err);
     }
 
+  });
+  Topic.create(req.body, (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(400).send(err);
+    }
     return res.status(200).send('OK');
   });
 }

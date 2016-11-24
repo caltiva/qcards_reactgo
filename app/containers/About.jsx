@@ -14,7 +14,7 @@ const About = () => {
     <div className={cx('about')}>
       <h1 className={cx('header')}>About Ninja Ocean</h1>
       <div className={cx('description')}>
-        <p>Imagine an ocean of ninjas. Now think of it as a metaphor.<br />
+        <p>Imagines an ocean of ninjas. Now think of it as a metaphor.<br />
           Seriously, we love good tech. React, redux, scala, Haskell, machine learning, you name it!
         </p>
       </div>

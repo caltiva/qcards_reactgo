@@ -5,6 +5,9 @@ switch (DB_TYPE) {
   case DB_TYPES.POSTGRES:
     module.exports = require('../postgres/sequelize_config');
     break;
+  case DB_TYPES.MONGO:
+      module.exports = require('../mongo/sequelize_config');
+      break;
   default:
     throw new Error(`No sequelize config found for db type '${DB_TYPE}'`);
 }
